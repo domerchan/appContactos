@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>crear-empleo</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+            <ion-label position="stacked">Nombre
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input required type="text" [(ngModel)]="empleo.nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+
+            <app-image-upload [icon]="'library'" [type]="'camera'" (uploadFinished)="imagenCargada($event)"></app-image-upload>
+            <app-image-crop [icon]="'camera'" [type]="'camera'" (uploadFinished)="imagenCargada($event)"></app-image-crop>
+
+
+            <ion-button type="button" (click)="tomarFoto()">Tomar foto</ion-button>
+            <img [src]="base64Image" />
+        </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+        <ion-button expand="block" type="submit" (click)="guardarEmpleo()">Crear empleo</ion-button>
+    </div>
+</ion-content>

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+//import { AuthService } from './shared/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,13 +20,13 @@ export class AppComponent implements OnInit {
       icon: 'mail'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
+      title: 'Listado Empleos',
+      url: 'lista-empleos',
       icon: 'paper-plane'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
+      title: 'Crear Empleo',
+      url: 'crear-empleo',
       icon: 'heart'
     },
     {
@@ -48,7 +50,9 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+//    private auth: AuthService,
+    private router: Router
   ) {
     this.initializeApp();
   }
@@ -57,6 +61,16 @@ export class AppComponent implements OnInit {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+/*
+      this.auth.getCurrentUser().then(user => {
+        console.log(user);
+        if (user) {
+          this.router.navigate(['folder/Inbox']);
+        } else {
+          this.router.navigate(['login']);
+        }
+      })*/
+
     });
   }
 

@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Lista-empleos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content fullscreen>
+    <ion-list>
+        <ion-list-header>
+            Lista de Empleos
+        </ion-list-header>
+
+        <ion-item *ngFor='let empleo of empleos |async; trackBy: trackByFn'>
+            <ion-avatar slot="start">
+                <img [src]="empleo.image.url" />
+            </ion-avatar>
+            <ion-label (click)="showEmpleo(empleo.uid)">
+                <h3>{{empleo.nombre}}</h3>
+                <h2 [class]="empleo.salario>40?'salarioAlto':''">{{empleo.salario}}</h2>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-label (click)="showCrearEmpleo()">
+                <ion-icon name="arrow-forward-circle"></ion-icon>
+            </ion-label>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

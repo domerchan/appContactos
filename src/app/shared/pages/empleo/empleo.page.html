@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>empleo</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="(empleo | async) as empleo">
+    <ion-card>
+        <img [src]="empleo.image.url" />
+        <ion-card-header>
+            <ion-card-title>{{empleo.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+        </ion-card-content>
+        <ion-card-content>
+            <ion-button (click)="editarEmpleo(empleo.uid)">Editar Empleo</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

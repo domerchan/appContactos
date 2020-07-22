@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>editar empleo</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="empleo as empleo">
+    <ion-card>
+        <img src="../../../../assets/icon/favicon.png" />
+        <ion-card-header>
+            <ion-label>Editar Nombre:</ion-label>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-input clearInput required type="text" [(ngModel)]="empleo.nombre" value="{{empleo.nombre}}"></ion-input>
+        </ion-card-content>
+        <ion-button type="submit" (click)="guardarEmpleo()">Guardar Cambios</ion-button>
+    </ion-card>
+</ion-content>
