@@ -9,7 +9,7 @@ Las imágenes se visualizan en la lista de empleos como avatar, y en el detalle 
 
 Permite acceder a la cámara, tomar una fotografía, y recortarla en una escala 1:1 para subirla al storage de Firebase 
 
-![](README/camera.JPG) ![](README/crop.JPG)
+![](README/camera.JPG) ![](README/crop.JPG)![](README/save.JPG) ![](README/upload.JPG)
 
 ## Instalación
 
