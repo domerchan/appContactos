@@ -61,7 +61,9 @@ providers: [
 ## Implementación 
 
 Para crear el componente se debe ingresar el siguiente comando dentro de la carpeta del proyecto:\
-ionic gereate component <ruta para los componentes>/image-crop
+```
+$ ionic gereate component <ruta para los componentes>/image-crop
+```
 
 **iamge-crop.component.html**
 ```html
@@ -218,12 +220,12 @@ export class ImageCropComponent implements OnInit {
 ## Uso 
 
 El componente se puede agregar en cualquier página html de la siguiente forma: 
-**página.html**
+**tu_página.html**
 ```html
 <app-image-crop [icon]="'camera'" [type]="'camera'" (uploadFinished)="imagenCargada($event)"></app-image-crop>
 ```
 
-**página.module.ts**
+**tu_página.module.ts**
 ```javascript
 ...
 import { ImageCropComponent } from 'src/app/components/image-crop/image-crop.component';
