@@ -14,15 +14,15 @@ Permite acceder a la cámara, tomar una fotografía, y recortarla en una escala 
 ## Instalación
 
 Es necesario instalar 4 APIs nativos para ionic de la página https://ionicframework.com/docs/native
-1. Camera \ 
-   **enlace:** https://ionicframework.com/docs/native/camera \
-   **instalación para capacitor:**\
+1. Camera\
+  **enlace:** https://ionicframework.com/docs/native/camera \
+  **instalación para capacitor:**\
     $ npm install cordova-plugin-camera \
     $ npm install @ionic-native/camera \
     $ ionic cap sync
 2. Crop \
-   **enlace:** https://ionicframework.com/docs/native/crop \
-   **instalación para capacito:r**\
+  **enlace:** https://ionicframework.com/docs/native/crop \
+  **instalación para capacito:r**\
     $ npm install cordova-plugin-crop \
     $ npm install @ionic-native/crop \
     $ ionic cap sync
